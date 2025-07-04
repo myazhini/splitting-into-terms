@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row ,space, col , val=1 , val1 ;
+        int total = n* (n+1);
+        
+        for(row=n;row>=1 ; row--)
+        {
+            total = total - row;
+            val1 = total;
+            for(space=1;space<=n-row;space++)
+                   System.out.print("--");
+            for(col =1 ; col<=row  ; col++)
+            {
+                System.out.print(val+"*");
+                val++;
+            }
+            
+            for(col =1 ; col<=row-1  ; col++)
+            {
+                val1++;
+                System.out.print(val1+"*");
+                
+            }
+            val1++;
+                System.out.print(val1);
+            System.out.println();
+                
+        }
+    }
+}
