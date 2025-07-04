@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+   public class Solution {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int x = input.nextInt();
+        int y = input.nextInt();
+
+        int startX = 3;
+        int startY = 4;
+
+        int dx = Math.abs(x - startX);
+        int dy = Math.abs(y - startY);
+
+        // Peter can move diagonally, so hops = max(dx, dy)
+        int hops = Math.max(dx, dy);
+
+        System.out.println(hops);
+    }
+}
